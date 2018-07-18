@@ -10,7 +10,6 @@
         <div class="col-lg-3">
 
           <app-left-nav></app-left-nav>
-
         </div>
         <!-- /.col-lg-3 -->
 
@@ -18,7 +17,7 @@
 
             <app-carousel></app-carousel>
 
-            <app-product></app-product>
+            <app-product (totalCartCountEmit) =  "cartCounter($event)"></app-product>
             <!-- /.row -->
 
         </div>

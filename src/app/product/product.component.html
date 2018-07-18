@@ -1,22 +1,7 @@
 <div class="row">
   <ng-container *ngFor = "let product of products; let index = index">
-  <div class="col-lg-4 col-md-6 mb-4">
-    <div class="card h-100">
-      <a href="#"><img class="card-img-top" src="/assets/images/{{product.productImg}}.jpg" alt="{{product.productImg}}"></a>
-      <div class="card-body">
-        <h4 class="card-title">
-          <a href="#">{{product.productName}}</a>
-        </h4>
-        <h5>${{product.productPrice}}</h5>
-        <p class="card-text">{{product.productDesc}}</p>
-      </div>
-      <div class="card-footer">
-        <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
-      </div>
-    </div>
-  </div>
+    <app-singleproduct (addCartCount)="totalCartCount($event)" class="col-lg-4 col-md-6 mb-4"  [product]="product"></app-singleproduct>
   </ng-container>
-
 </div>
 <!-- {{products| json}} -->
 <!-- /.row -->

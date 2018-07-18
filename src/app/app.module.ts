@@ -10,6 +10,8 @@ import { LeftNavComponent } from './left-nav/left-nav.component';
 import { ProductComponent } from './product/product.component'; 
 import { ProductService} from './product/product.service';
 import {HttpClientModule} from '@angular/common/http';
+import { SingleproductComponent } from './singleproduct/singleproduct.component';
+import { DataService } from '../data.service';
 
 @NgModule({
   declarations: [
@@ -18,12 +20,13 @@ import {HttpClientModule} from '@angular/common/http';
     FooterComponent,
     CarouselComponent,
     LeftNavComponent,
-    ProductComponent
+    ProductComponent,
+    SingleproductComponent
   ],
   imports: [
     BrowserModule,HttpClientModule
   ],
-  providers: [ProductService],
+  providers: [ProductService,DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
