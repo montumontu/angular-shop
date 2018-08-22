@@ -10,7 +10,6 @@ import 'rxjs/add/operator/map';
 export class NavBarComponent implements OnInit {
   totalProduct:number = 0;
   constructor(private data:DataService) {
-
    }
 
   ngOnInit() {

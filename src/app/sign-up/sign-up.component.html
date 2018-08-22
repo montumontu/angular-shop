@@ -1,0 +1,66 @@
+<div class="container">
+  <div id="signupbox" style=" margin-top:50px; border: mediumturquoise solid" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+    <div class="panel panel-info">
+      <div class="panel-heading">
+        <div class="panel-title" style=" margin-bottom:10px">Sign Up</div>
+      </div>
+      <div class="panel-body">
+
+        <form id="signupform" #userForm= "ngForm" (ngSubmit)='signUpForm(userForm)' class="form-horizontal">
+
+          <div class="form-group">
+            <div class="col-md-9">
+              {{signup.email}}
+              <input type="text" name='email' [(ngModel)]="signup.email" class="form-control" required  placeholder="Email Address" ngModel>
+            </div>
+             <!-- <div *ngIf="email.errors && (email.dirty || email.touched)" class="alert alert-danger">Not a Valid Email</div> -->
+          </div>
+
+           <div class="form-group">
+            <div class="col-md-9">
+              <input type="text" class="form-control" required [(ngModel)]="signup.firstname" id="firstname" name="firstname" placeholder="First Name"
+            ngModel>
+            </div>
+            <!-- <div *ngIf="firstname.errors && (firstname.dirty || firstname.touched)" class="alert alert-danger">Please provide your First name</div> -->
+          </div>
+
+          <div class="form-group">
+            <div class="col-md-9">
+              <input type="text" class="form-control" required [(ngModel)]="signup.lastname" name="lastname" id="lastname" placeholder="Last Name"
+                ngModel>
+            </div>
+            <!-- <div *ngIf="lastname.errors && (lastname.dirty || lastname.touched)" class="alert alert-danger">Please provide your last name</div> -->
+          </div>
+
+          <div class="form-group">
+            <div class="col-md-9">
+              <input type="password" class="form-control" required [(ngModel)]="signup.password" name="password" id="password" placeholder="Password"
+                ngModel>
+            </div>
+            <!-- <div *ngIf="passwd.errors && (passwd.dirty || passwd.touched)" class="alert alert-danger">Please provide your Password</div> -->
+          </div>
+
+          <div class="form-group">
+            <div class="col-md-9">
+              <input type="text" class="form-control" id="icode" [(ngModel)]="signup.icode" name="icode" placeholder="Code" ngModel>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <!-- Button -->
+           <!-- <div class="col-md-offset-3 col-md-9">
+                <button id="btn-signup" [disabled]="signUpForm.form.invalid" type="submit" class="btn btn-info">
+                  <i class="icon-hand-right"></i> Sign Up</button>
+            </div> -->
+           <div class="col-md-offset-3 col-md-9">
+              <button id="btn-signup" type="submit" class="btn btn-info">
+                <i class="icon-hand-right"></i> Sign Up</button>
+            </div>
+            </div>
+
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

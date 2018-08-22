@@ -8,10 +8,11 @@ import { Component } from '@angular/core';
 export class AppComponent {
   noOfProducts = new Array(5);
 
-  cartCount:number= 0;
+  cartCount:number = 0;
 
   cartCounter($event) {
     console.log($event);
+    console.log('tota cart count');
     this.cartCount = $event ;
   }
 

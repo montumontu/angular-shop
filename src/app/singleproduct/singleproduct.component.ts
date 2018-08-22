@@ -9,14 +9,15 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 export class SingleproductComponent implements OnInit {
 
   constructor() { }
+  @Input() product;
   @Output() addCartCount: EventEmitter<number> = new EventEmitter();
 
-  count:number=0;
+  count: number = 0;
   counter() {
     this.count += 1;
     this.addCartCount.emit(this.count);
   };
-  @Input() product;
+
   ngOnInit() {
   }
 }
